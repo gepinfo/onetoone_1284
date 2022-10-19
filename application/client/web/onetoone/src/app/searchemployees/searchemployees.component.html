@@ -1,0 +1,42 @@
+<h2 class="screen-align">Searchemployees</h2>
+<label id="template-isgg" class="label ">
+    <div id="template-imtg" class="">Employee ID:</div>
+</label>
+<input id="template-if12" placeholder="Enter employee ID" required="true"
+[(ngModel)]="employeesentity.employeeid" [ngModelOptions]="{standalone: true}"
+class="input form-control " />
+<button id="template-i9uh" (click)="GpSearchRelationship()" class="button btn btn-primary ">
+    <div id="template-iopi" class="">Search</div>
+</button>
+<div name="grid_template-i33g" class="">
+    <div class="tableBg">
+        <table id="table" class="table table-bordered  table-striped table-curved"
+        data-show-header="true" data-pagination="true" data-id-field="name">
+            <thead class="table table-hover">
+                <tr>
+                    <th *ngFor="let column of columnDefs">{{column.headerName}}</th>
+                </tr>
+            </thead>
+            <tbody class="table-design" *ngIf="rowData.length==0">
+                <td style="text-align: center;" colspan="5">No Data Found</td>
+            </tbody>
+            <tbody class="table-design" *ngIf="rowData.length>0">
+                <tr *ngFor="let values of rowData | slice: (page-1) * paginationPageSize :(page-1) * paginationPageSize + paginationPageSize">
+                    <td>{{ values.name }}</td>
+                    <td>{{ values.designation }}</td>
+                    <td>{{ values.employeeid }}</td>
+                    <td>{{ values.carid }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="bottomPage">
+        <div class="text-right">
+            <ngb-pagination class="d-flex justify-content-start" [(page)]="page" [maxSize]="5"
+            [rotate]="true" [pageSize]="paginationPageSize" [collectionSize]="rowData.length"
+            [boundaryLinks]="true"></ngb-pagination>
+        </div>
+    </div>
+    <div id="myGrid" class=""></div>
+</div>
+<div id="myGrid" class="ag-theme-alpine "></div>

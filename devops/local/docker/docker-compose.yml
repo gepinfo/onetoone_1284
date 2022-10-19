@@ -204,7 +204,7 @@ services:
     image: systementry-1284
     container_name: systementry-1284
     ports: 
-      - 8014:8014
+      - 8010:8010
     env_file: .env
     depends_on:
       - mongo
@@ -220,7 +220,7 @@ services:
     image: cars-1284
     container_name: cars-1284
     ports: 
-      - 8015:8015
+      - 8011:8011
     env_file: .env
     depends_on:
       - mongo
@@ -236,7 +236,7 @@ services:
     image: employees-1284
     container_name: employees-1284
     ports: 
-      - 8016:8016
+      - 8012:8012
     env_file: .env
     depends_on:
       - mongo

@@ -32,6 +32,9 @@ const routes: Routes = [
        { path: '', component: TemplateComponent, pathMatch: 'full'   } ,
 { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
 
+{ path : 'createcars', loadChildren: () => import('./createcars/createcars.module').then(m => m.CreatecarsModule), canActivate: [AuthGuard] } , 
+{ path : 'createemployees', loadChildren: () => import('./createemployees/createemployees.module').then(m => m.CreateemployeesModule), canActivate: [AuthGuard] } , 
+{ path : 'searchemployees', loadChildren: () => import('./searchemployees/searchemployees.module').then(m => m.SearchemployeesModule), canActivate: [AuthGuard] } , 
 ];
 
 @NgModule({
