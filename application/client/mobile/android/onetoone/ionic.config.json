@@ -1,0 +1,7 @@
+{
+  "name": "onetoone",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

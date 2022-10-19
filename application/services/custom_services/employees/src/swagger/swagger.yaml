@@ -1,0 +1,84 @@
+---
+openapi: 3.0.0
+info:
+   version: 1.3.0
+   title: onetoone open api specification
+   description: employees API
+   termsOfService: http://api_url/terms/
+   contact:
+      name: ContactName
+      email: hello@wolox.co
+      url: https://www.wolox.com.ar/
+   license:
+      name: Apache 2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+   - url: http://localhost:8016
+     description: employees
+tags:
+- name: employeesentity
+  description: Second Entity
+paths:
+   "/employeesentity":
+      get:
+         tags:
+         -  employeesentity
+         description: GpGetAllValues
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+      post:
+         tags:
+         -  employeesentity
+         description: GpCreate
+         requestBody:
+            content:
+               application/json:
+                  schema:
+                     $ref: "#/components/schemas/employeesentity"
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+   "/employeesentity/get/searchrelationship":
+      get:
+         tags:
+         -  employeesentity
+         description: GpSearchRelationship
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+components:
+   schemas:
+      employeesentity:
+         type: object
+         properties:
+            name:
+               type: "string"
+               description: Description
+            designation:
+               type: "string"
+               description: Description
+            employeeid:
+               type: "number"
+               description: Description
+            carid:
+               type: "string"
+               description: Description
