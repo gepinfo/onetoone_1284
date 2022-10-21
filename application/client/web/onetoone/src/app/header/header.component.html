@@ -79,6 +79,31 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div id="icrvgp" class="cell gpd-clm" *ngIf="isApplicable('createemployees') && userId">
+                                    <div id="i6vd27" class="gdp-row gpd-grid" *ngIf="isApplicable('createemployees') && userId">
+                                        <div id="inlo1l" class="cell gpd-clm" *ngIf="isApplicable('createemployees') && userId"> <i id="iyxitk" class="fa fa-folder-open" aria-hidden="true"></i>
+
+                                        </div>
+                                        <div id="iytw4t" class="cell gpd-clm" *ngIf="isApplicable('createemployees') && userId"> <a id="i9imej" class="gpd-text" href="#employees" data-toggle="collapse"
+                                            data-parent="#MainMenu">employees <i class="fa fa-caret-down"></i></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="employees" *ngIf="isApplicable('createemployees') && userId">
+                                    <div id="icrvgp" class="cell gpd-clm">
+                                        <div id="i6vd27" class="gdp-row gpd-grid">
+                                            <div id="iytw4t" class="cell gpd-clm"> <a id="i9imej" class="gpd-text" [routerLink]="['/createemployees']">{{'source.createemployees' | i18next}}</a>
+
+                                            </div>
+                                        </div>
+                                        <div id="i6vd27" class="gdp-row gpd-grid">
+                                            <div id="iytw4t" class="cell gpd-clm"> <a id="i9imej" class="gpd-text" [routerLink]="['/searchemployees']">{{'source.searchemployees' | i18next}}</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div id="icrvgp" class="cell gpd-clm" *ngIf='userId!=null'>
                                     <div id="i6vd27" class="gdp-row gpd-grid" *ngIf='userId!=null'>
                                         <div id="inlo1l" class="cell gpd-clm" *ngIf='userId!=null'> <i id="iyxitk" class="fa fa-sign-out" aria-hidden="true"></i>
